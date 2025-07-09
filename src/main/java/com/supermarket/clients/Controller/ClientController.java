@@ -1,5 +1,8 @@
 package com.supermarket.clients.Controller;
 
+import com.supermarket.clients.Dto.Request.ClientRequestDto;
+import com.supermarket.clients.Dto.Response.ClientResponseDto;
+import com.supermarket.clients.Service.ClientService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -14,9 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "client/v1", produces = MediaType.APPLICATION_JSON_VALUE)
 public class ClientController {
 
+    private final ClientService clientServiceInterfaz;
 
-    public ClientController(){
+    public ClientController(ClientService clientServiceInterfaz){
 
+        this.clientServiceInterfaz = clientServiceInterfaz;
     }
 
     /**

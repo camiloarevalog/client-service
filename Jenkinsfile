@@ -3,13 +3,13 @@ pipeline {
 
     tools {
         // Herramientas preinstaladas en Jenkins (asegúrate de configurar JDK y Gradle en Jenkins primero)
-        jdk 'JDK 17'          // Nombre configurado en "Global Tool Configuration"
-        gradle 'Gradle 8.14.3'   // Nombre configurado en Jenkins también
+        jdk 'Java Jdk17'          // Nombre configurado en "Global Tool Configuration"
+        gradle 'Gradle'   // Nombre configurado en Jenkins también
     }
 
     environment {
         // Variables de entorno necesarias para Gradle + Java
-        JAVA_HOME = "${tool 'JDK 17'}"
+        JAVA_HOME = "${tool 'Java Jdk17'}"
         PATH = "${JAVA_HOME}/bin:${env.PATH}"
     }
 
@@ -48,11 +48,11 @@ pipeline {
             }
             steps {
                 echo '📁 Artefactos generados:'
-                bat 'ls -lh build/libs'
+                bat 'dir build\\libs'
             }
         }
 
-        // Puedes añadir etapas para SonarQube, Docker, AWS, etc.
+        // Puedes añadir etapas para SonarQube, Docker, AWS.
     }
 
     post {
