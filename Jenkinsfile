@@ -48,7 +48,7 @@ pipeline {
             }
             steps {
                 echo '📁 Artefactos generados:'
-                bat 'ls -lh build/libs'
+                bat 'dir build\\libs'
             }
         }
 
