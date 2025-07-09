@@ -1,5 +1,6 @@
 package com.supermarket.clients.Service.impl;
 
+import com.supermarket.clients.Dto.Response.ClientResponseDto;
 import com.supermarket.clients.Model.Client;
 import com.supermarket.clients.Service.ClientService;
 import com.supermarket.clients.repository.ClientRepository;
@@ -13,7 +14,7 @@ private final ClientRepository clientRepository;
     }
 
     @Override
-    public ClientResponseDto save(Client client) {
+    public ClientResponseDto saveClient(Client client) {
         return null;
     }
 }
