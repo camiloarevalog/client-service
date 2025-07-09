@@ -52,7 +52,7 @@ pipeline {
             }
         }
 
-        // Puedes añadir etapas para SonarQube, Docker, AWS, etc.
+        // Puedes añadir etapas para SonarQube, Docker, AWS.
     }
 
     post {
